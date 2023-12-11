@@ -14,13 +14,16 @@ export const Menu = () => (
     <a href="#home" className="nav-link home">
       Home
     </a>
+    <a href="#about" className="about section">
+      About
+    </a>
     <a href="#skills" className="nav-link skills">
       Skills
     </a>
     <a href="#experience" className="">
       Experience
     </a>
-    <a href="#project" className="nav-link projects">
+    <a href="#projects" className="nav-link projects">
       Projects
     </a>
     <a href="#education">Education</a>
