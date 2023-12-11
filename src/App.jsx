@@ -13,7 +13,6 @@ const App = () => {
       <Navbar />
       <div className="xl:px-40 lg:px-20 md:px-10 sml:px-5 px-2">
         <Hero />
-        <About />
         <Skills />
         <Experience />
         <Projects />
