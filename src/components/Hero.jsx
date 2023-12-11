@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="text-center sm:text-left">
         <div className="xl:text-5xl lg:text-4xl text-3xl text-white font-semibold">
           <h1>Hii there👋,</h1>
-          <h1 className="my-3">I am Mohd Salman</h1>
+          <h1 className="my-3 user-detail-name">I am Mohd Salman</h1>
         </div>
         <h1 className="xl:text-3xl lg:text-2xl text-xl md:mt-3 mt-2">
           I am a{" "}
@@ -38,7 +38,7 @@ const Hero = () => {
             />
           </span>
         </h1>
-        <p className="md:font-medium xl:text-xl lg:text-lg sml:text-md sm:text-left md:mt-3 mt-1 text-center">
+        <p className="md:font-medium xl:text-xl lg:text-lg sml:text-md sm:text-left md:mt-3 mt-1 text-center user-detail-intro">
           I'm a go-getter, always up for new challenges! I love diving into
           opportunities to learn and am committed to delivering top-notch
           results. With a positive mindset and a hunger for growth, I'm geared
@@ -48,7 +48,7 @@ const Hero = () => {
           <IconButton
             skill="GitHub"
             icon={githubIcon}
-            className={"border-gray-500"}
+            className={"border-gray-500 contact-github"}
             onClick={handleVisitGitHub}
           />
           <IconButton
@@ -56,6 +56,7 @@ const Hero = () => {
             icon={dwonloadIcon}
             className={"border-gray-500"}
             onClick={handleDwonloadResume}
+            id={"resume-button-2"}
           />
         </div>
       </div>
@@ -63,7 +64,7 @@ const Hero = () => {
       <div className="flex justify-center items-center">
         <img
           src={profile}
-          className="lg:w-[70%] sm:w-[85%] w-[60%] backdrop-blur-0 animate-floating motion-safe shadow-md shadow-blue-800 rounded-[50%]"
+          className="lg:w-[70%] sm:w-[85%] w-[60%] backdrop-blur-0 animate-floating motion-safe shadow-md shadow-blue-800 rounded-[50%] home-img"
           alt="Profile Picture"
         />
       </div>

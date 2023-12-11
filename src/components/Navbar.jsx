@@ -7,16 +7,26 @@ import { RxCross2 } from "react-icons/rx";
 import { Events, animateScroll as scroll } from "react-scroll";
 import IconButton from "./IconButton";
 import { dwonloadIcon } from "../assets/imports";
-import { handleDwonloadResume } from  '../constants/constants.js'
+import { handleDwonloadResume } from "../constants/constants.js";
 
 export const Menu = () => (
   <>
-    <a href="#home">Home</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#project">Projects</a>
+    <a href="#home" className="nav-link home">
+      Home
+    </a>
+    <a href="#skills" className="nav-link skills">
+      Skills
+    </a>
+    <a href="#experience" className="">
+      Experience
+    </a>
+    <a href="#project" className="nav-link projects">
+      Projects
+    </a>
     <a href="#education">Education</a>
-    <a href="#contact">Contacts</a>
+    <a href="#contact" className="nav-link contact">
+      Contacts
+    </a>
   </>
 );
 
@@ -49,6 +59,7 @@ const Navbar = () => {
           ? "bg-glass shadow-glass backdrop:filter-glass"
           : "bg-transparent"
       }`}
+      id="nav-menu"
     >
       <Link to="#home" className="flex text-2xl sm:text-3xl items-center">
         <DiCssdeck /> <span>Portfolio</span>
@@ -59,8 +70,9 @@ const Navbar = () => {
       <IconButton
         skill="Resume"
         icon={dwonloadIcon}
-        className={"border-gray-500 py-1 hidden lg:flex"}
+        className={"border-gray-500 py-1 hidden lg:flex nav-link resume"}
         onClick={handleDwonloadResume}
+        id={"resume-button-1"}
       />
       <div className="text-white text-2xl sm:text-3xl lg:hidden">
         {toggleMenu ? (
@@ -84,6 +96,7 @@ const Navbar = () => {
               icon={dwonloadIcon}
               className={"border-gray-500 py-1 lg:flex bg-blue-950 mt-3"}
               onClick={handleDwonloadResume}
+              id={"resume-button-1"}
             />
           </>
         </div>

@@ -3,7 +3,7 @@ import IconButton from "../IconButton";
 
 const Skill = ({ text, array }) => {
   return (
-    <div className="border border-blue-900 flex justify-center flex-col items-center rounded-md p-5 shadow-sm shadow-blue-900">
+    <div className="border border-blue-900 flex justify-center flex-col items-center rounded-md p-5 shadow-sm shadow-blue-900 skills-card">
       <h1 className="text-2xl">{text}</h1>
       <div className="flex flex-wrap gap-3 justify-center mt-4">
         {array?.map((e, idx) => {
@@ -12,7 +12,8 @@ const Skill = ({ text, array }) => {
               key={idx}
               skill={e.skill}
               icon={e.icon}
-              className={"border-gray-500"}
+              className={"border-gray-500 skills-card-name"}
+              imgClass={"skills-card-img"}
             />
           );
         })}
