@@ -1,0 +1,24 @@
+{
+  "projects": [
+    {
+      "title": "Wood Fans",
+      "image": "https://github.com/Raghavbhati/obscene-clam-8417/raw/main/public/screenshots/homePage.png",
+      "description": "Welcome to Wood Fans, your personal gateway to a world where artistry meets practicality. Our mission is to transform houses into homes, spaces into sanctuaries. We offer an exclusive range of sustainable furniture, each piece a testament to superior craftsmanship and comfort. With Wood Fans, you’re not just buying furniture, you’re investing in a lifestyle of elegance and relaxation. Experience the joy of creating your own haven with our meticulously curated selection, designed to cater to your unique style and comfort needs. Step into the realm of Wood Fans, and redefine your living spaces with us.",
+      "techStack": ["React", "Redux", "Tailwind", "Firebase", "Razorpay"]
+    },
+    {
+      "title": "Online Mine Wine Shop",
+      "image": "https://private-user-images.githubusercontent.com/112762975/289165320-cca5498d-9488-4132-a3f6-e119ba7053aa.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDIwNjI5NDksIm5iZiI6MTcwMjA2MjY0OSwicGF0aCI6Ii8xMTI3NjI5NzUvMjg5MTY1MzIwLWNjYTU0OThkLTk0ODgtNDEzMi1hM2Y2LWUxMTliYTcwNTNhYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTIwOFQxOTEwNDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xYmQwYzliYzQ3ZDg5N2VhMzc1YWUyNzQ5OWFmMjRmYzNiNTFlYjZkZWNmMmU3NDQ1OGU2Zjk0ZDA0MDc5YWFjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.xLN3vFw_zwo_DpLOCw--wFTSRd4xu2Ohd1UwZ9jg_xU",
+      "description": "Welcome to WineShop, your one-stop online destination for all things wine. Explore our extensive catalog, learn about each wine’s unique story, and effortlessly purchase your favorites. With secure checkout and user-friendly navigation, we make wine shopping a breeze. Dive into the world of wines with us today.",
+      "techStack": ["HTML", "CSS", "Javsscript", "Firebase", "Razorpay"]
+    },
+    {
+      "title": "Bewakoof Clone",
+      "image": "https://private-user-images.githubusercontent.com/112762975/289166333-061b012f-113c-4e42-adbf-e31f49564811.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDIwNjMyNTUsIm5iZiI6MTcwMjA2Mjk1NSwicGF0aCI6Ii8xMTI3NjI5NzUvMjg5MTY2MzMzLTA2MWIwMTJmLTExM2MtNGU0Mi1hZGJmLWUzMWY0OTU2NDgxMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTIwOFQxOTE1NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jYzhmMWU0MjdiZjc2MDQ0MzQwZTk1MmM0NTIzMzNlNzhkMGQ0MGIxNWZhMTRkZDM0YWRjYWYyNzZjMzk1ZjMzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.yL4WY06tweFAmrmDBeeQG2swxrV7GZFYKxNYnyvCtu4",
+
+      "description": "Welcome to Bewakoof.com, India’s go-to online hub for trendy, unique, and playful fashion. We offer a diverse selection of casual clothing and accessories, perfect for those seeking to express their individuality through their style. Explore, shop, and express yourself with Bewakoof.com.",
+
+      "techStack": ["HTML", "CSS", "Javsscript", "Firebase", "Razorpay"]
+    }
+  ]
+}
