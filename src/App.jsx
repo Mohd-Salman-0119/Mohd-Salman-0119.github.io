@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
-import About from "./components/About";
+
 const App = () => {
   return (
     <div className="bg-gradient w-full font-sans scroll-smooth">

@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="text-center sm:text-left">
         <div className="xl:text-5xl lg:text-4xl text-3xl text-white font-semibold">
           <h1>Hii there👋,</h1>
-          <h1 className="my-1 user-detail-name">I am Mohd Salman</h1>
+          <h1 className="my-1" id="user-detail-name">I am Mohd Salman</h1>
         </div>
         <h1 className="xl:text-3xl lg:text-2xl text-xl md:mt-3 mt-1">
           I am a{" "}
@@ -50,6 +50,7 @@ const Hero = () => {
             icon={githubIcon}
             className={"border-gray-500 contact-github"}
             onClick={handleVisitGitHub}
+            
           />
           <IconButton
             skill="Resume"

@@ -14,9 +14,6 @@ export const Menu = () => (
     <a href="#home" className="nav-link home">
       Home
     </a>
-    <a href="#about" className="about section">
-      About
-    </a>
     <a href="#skills" className="nav-link skills">
       Skills
     </a>
@@ -64,9 +61,9 @@ const Navbar = () => {
       }`}
       id="nav-menu"
     >
-      <Link to="#home" className="flex text-2xl sm:text-3xl items-center">
+      <a href="#home" className="flex text-2xl sm:text-3xl items-center">
         <DiCssdeck /> <span>Portfolio</span>
-      </Link>
+      </a>
       <div className="lg:gap-10 lg:flex hidden gap-4 text-xl">
         <Menu />
       </div>
@@ -77,6 +74,7 @@ const Navbar = () => {
         onClick={handleDwonloadResume}
         id={"resume-button-1"}
       />
+
       <div className="text-white text-2xl sm:text-3xl lg:hidden">
         {toggleMenu ? (
           <RxCross2
