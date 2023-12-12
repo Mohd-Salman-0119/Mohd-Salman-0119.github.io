@@ -6,7 +6,7 @@ const About = () => {
     <div className="my-8 md:my-20 flex flex-col about section" id="about">
       <div>
         <h1 className="text-center text-2xl md:text-4xl">About Me</h1>
-        <p className="text-center text-md md:text-xl lg:w-[50%] m-auto mt-2 md:mt-4">
+        <p className="text-center text-md md:text-xl lg:w-[50%] m-auto mt-2 md:mt-4" id="user-detail-intro">
           Skilled Front-end Developer, honing diverse technologies for the past
           year.
         </p>

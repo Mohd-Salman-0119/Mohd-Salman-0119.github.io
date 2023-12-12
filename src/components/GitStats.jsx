@@ -24,20 +24,16 @@ const GitStats = () => {
               src="https://github-readme-stats.vercel.app/api?username=Mohd-Salman-0119&show_icons=true&theme=transparent&hide_border=true"
               id="github-stats-card"
               alt=""
-              
             />
           </div>
         </div>
 
         <div>
-          <a href="https://git.io/streak-stats">
-            <img
-              id="github-streak-stats"
-              src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mohd-Salman-0119&theme=transparent"
-              alt="GitHub Streak"
-              className=""
-            />
-          </a>
+          <img
+            id="github-streak-stats"
+            src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mohd-Salman-0119&theme=transparent"
+            alt="GitHub Streak"
+          />
         </div>
       </div>
     </div>

@@ -65,7 +65,7 @@ const Contacts = () => {
             <div className="flex gap-2 items-center text-sm md:text-md font-semibold text-gray-500">
               <MdLocalPhone />
 
-              <h1 className="contact-phone">+91 8273691527</h1>
+              <h1 id="contact-phone">+91 8273691527</h1>
             </div>
             <div className="flex gap-2 items-center text-sm md:text-md font-semibold md:my-2 my-1 text-gray-500 contact-email">
               <MdOutlineMarkEmailRead />
@@ -77,17 +77,20 @@ const Contacts = () => {
             </div>
             <div className="flex gap-3 text-xl md:text-3xl my-3 md:my-5">
               <FaGithub
-                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-glass transition-all duration-1000 ease-in-out cursor-pointer contact-github"
+                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-glass transition-all duration-1000 ease-in-out cursor-pointer"
                 onClick={handleVisitGitHub}
+                id="contact-github"
               />
 
               <MdEmail
-                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-[#F05941] transition-all duration-1000 ease-in-out cursor-pointer contact-email"
+                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-[#F05941] transition-all duration-1000 ease-in-out cursor-pointer"
                 onClick={handleVisitEmail}
+                id="contact-email"
               />
               <CiLinkedin
-                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-[#0077b5] transition-all duration-1000 ease-in-out cursor-pointer contact-linkedin"
+                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-[#0077b5] transition-all duration-1000 ease-in-out cursor-pointer"
                 onClick={handleVisitLinkedIn}
+                id="contact-linkedin"
               />
             </div>
           </div>
