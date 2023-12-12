@@ -24,7 +24,7 @@ const Project = (props) => {
 
   return (
     <div
-      className={`flex flex-col items-center gap-5 border border-blue-900 hover:border-gray-500 lg:p-5 p-3 rounded-md hover:bg-glass transition-all duration-1000 ${flexRow} shadow-sm shadow-blue-900 project-card`}
+      className={`flex flex-col items-center gap-5 border border-blue-900 hover:border-gray-500 lg:p-5 p-3 rounded-md transition-all duration-1000 ${flexRow} shadow-sm shadow-blue-900 project-card`}
     >
       <img
         src={image}
@@ -40,7 +40,7 @@ const Project = (props) => {
             <TextButton text={tech} key={index} />
           ))}
         </div>
-        <p className="mt-3 overflow-hidden line-clamp-3 md:line-clamp-none text-sm project-description">{description}</p>
+        <p className="mt-3 overflow-hidden line-clamp-3 md:line-clamp-none hover:line-clamp-none text-sm project-description">{description}</p>
 
 
         <div className="flex justify-around items-end gap-5 mt-5">
@@ -48,15 +48,15 @@ const Project = (props) => {
             skill={"Source Code"}
             icon={githubIcon}
             className={
-              "w-full justify-center border-blue-900 hover:border-gray-500 hover:bg-glass transition-all duration-1000 ease-in-out sml:text-sm text-[10px] shadow-md project-github-link"
+              "w-full justify-center border-blue-900 hover:border-gray-500 transition-all duration-1000 ease-in-out sml:text-sm text-[10px] shadow-md project-github-link"
             }
             onClick={handleSourceCode}
           />
           <IconButton
-            skill={"View Live App"}
+            skill={"Live Demo"}
             icon={eyeIcon}
             className={
-              "w-full justify-center border-blue-900 hover:bg-glass hover:border-gray-500 transition-all duration-1000 ease-in-out sml:text-sm text-[10px] shadow-md project-deployed-link"
+              "w-full justify-center border-blue-900 hover:border-gray-500 transition-all duration-1000 ease-in-out sml:text-sm text-[10px] shadow-md project-deployed-link md:gap-2"
             }
             onClick={handleLiveLink}
           />

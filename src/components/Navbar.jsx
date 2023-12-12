@@ -14,11 +14,11 @@ export const Menu = () => (
     <a href="#home" className="nav-link home">
       Home
     </a>
+    <a href="#about" className="nav-link about">
+      About
+    </a>
     <a href="#skills" className="nav-link skills">
       Skills
-    </a>
-    <a href="#experience" className="">
-      Experience
     </a>
     <a href="#projects" className="nav-link projects">
       Projects
@@ -54,7 +54,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex lg:justify-around justify-between items-center text-white cursor-pointer py-3 px-3 lg:px-8 sticky top-0 left-0 right-0 z-50 ${
+      className={`flex lg:justify-around justify-between items-center cursor-pointer py-3 px-3 lg:px-8 sticky top-0 left-0 right-0 z-50 ${
         scrolled
           ? "bg-glass shadow-glass backdrop:filter-glass"
           : "bg-transparent"

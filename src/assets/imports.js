@@ -28,6 +28,10 @@ import dwonloadIcon from './icons/dwonload.png'
 import sendEmail from './icons/send.png'
 import contactsImage from './icons/contact.svg'
 import tickIcon from './icons/tick.png'
+import journeyImage from './images/journey.jpg'
+
+
+
 // projects images
 import bewakoofSite from './images/bewakoof.png'
 import woodFansSite from './images/wood-fans.png'
@@ -40,6 +44,7 @@ import masaiImage from './images/masai.jpg'
 import srgiImage from './images/srgi.jpeg'
 import hrkImage from './images/hrk.png'
 import computerLogo from './images/compterLogo.jpeg'
+import profile from './profile-pic.png'
 
 
 export {
@@ -76,7 +81,7 @@ export {
      srgiImage, hrkImage, computerLogo,
      timeManagement,
      teamWork,
-     contribute, sendEmail, contactsImage, tickIcon
+     contribute, sendEmail, contactsImage, tickIcon,journeyImage,profile
 
 
 }

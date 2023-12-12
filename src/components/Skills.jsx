@@ -21,10 +21,10 @@ import Skill from "./common/Skill";
 
 const Skills = () => {
   return (
-    <div className="text-white my-8 md:my-20 flex flex-col" id="skills">
+    <div className="my-8 md:my-20 flex flex-col" id="skills">
       <div>
         <h1 className="text-center text-2xl md:text-4xl">Skills</h1>
-        <p className="text-center text-md md:text-xl lg:w-[50%] w-[90%] m-auto mt-2 md:mt-4">
+        <p className="text-center text-md md:text-xl lg:w-[50%] w-[100%] m-auto mt-2 md:mt-4">
           Here are some of my skills on which I have been working on for the
           past 1 years.
         </p>

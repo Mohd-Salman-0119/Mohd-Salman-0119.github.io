@@ -1,7 +1,6 @@
 import React from "react";
-import profile from "../assets/profile-pic.png";
 import IconButton from "./IconButton";
-import { dwonloadIcon, githubIcon } from "../assets/imports";
+import { dwonloadIcon, githubIcon, profile } from "../assets/imports";
 import {
   handleDwonloadResume,
   handleVisitGitHub,
@@ -11,7 +10,7 @@ import { Typewriter } from "react-simple-typewriter";
 const Hero = () => {
   return (
     <div
-      className="sm:mt-24 mt-5 flex gap-5 items-center flex-col-reverse sm:grid sm:grid-cols-2 justify-between text-white"
+      className="sm:mt-24 mt-5 flex gap-5 items-center flex-col-reverse sm:grid sm:grid-cols-2 justify-between"
       id="home"
     >
       <div className="text-center sm:text-left">

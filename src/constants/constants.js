@@ -206,9 +206,9 @@ export const education = [
      },
      {
           image: srgiImage,
-          course: "Bachelor's of Technology (Computer Science)",
+          course: "Bachelor's of Technology (CS)",
           duration: "August-2019 - July-2023",
-          Institute: "SR Institute Of Management and Technology, BKT Lucknow (U.P)",
+          Institute: "SRIMT BKT Lucknow (U.P)",
           description: "Embarking on my Bachelor of Technology journey in 2019, I've experienced significant growth and learning throughout the four-year expedition, concluding in 2023. The curriculum provided a comprehensive understanding of Data Structures and Algorithms, contributing to my solid foundation in technology. This educational odyssey has not only equipped me with essential skills but also fostered personal and professional development, shaping a promising future in the tech landscape.",
           skills: "Collabration, Team Work, and more."
      },
@@ -218,11 +218,11 @@ export const education = [
           duration: "August-2017 - July-2019",
           Institute: "Hafiz Rahmat Khan Inter Collage, Pilibhit (U.P)",
           description: "During my Senior Secondary education, I cultivated a profound understanding of various subjects, fostering a mindset that embraces challenges and thrives in demanding situations. This learning stage has been instrumental in building my capabilities and instilling a strong work ethic that I carry forward with confidence.",
-          skills: "Mathematics, Chemistry, Chemistry, Problem-Solving, Time Management"
+          skills: "Problem-Solving, Time Management"
      },
      {
           image: computerLogo,
-          course: "Advanced Diploma in Computer Application (ADCA)",
+          course: "ADCA Diploma",
           duration: "June-2017 - July-2018",
           Institute: "System Computer Education, Pilibhit (U.P)",
           description: "Completing the Advanced Diploma in Computer Application (ADCA) marked the inception of my journey into the realm of computer and technology. Through this comprehensive program, I acquired proficiency in tools such as MS-Word, Excel, PowerPoint, and more. This pivotal experience ignited my passion for technology, laying the groundwork for further exploration and expertise.",

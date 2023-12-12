@@ -18,7 +18,7 @@ import Project from "./common/Project";
 const Projects = () => {
   const navigate = useNavigate();
   return (
-    <div className="text-white my-6 md:my-20" id="projects">
+    <div className="my-6 md:my-20" id="projects">
       <div>
         <h1 className="text-center text-2xl md:text-4xl">Projects</h1>
         <p className="text-center text-sm md:text-xl md:w-[90%] m-auto mt-2 md:mt-4">

@@ -12,7 +12,7 @@ module.exports = {
         'email-color':""
       },
       backgroundColor: {
-        'glass': 'rgba(76, 35, 166, 0.86)',
+        'glass': 'rgba(30, 58, 138, 0.9)',
       },
       borderRadius: {
         'glass': '16px',
@@ -21,8 +21,8 @@ module.exports = {
         'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
       },
       backdropFilter: {
-        'glass': 'blur(4.1px)',
-        'webkit-glass': '-webkit-blur(4.1px)',
+        'glass': 'blur(5.1px)',
+        'webkit-glass': '-webkit-blur(5.1px)',
       },
       borderWidth: {
         'glass': '1px',

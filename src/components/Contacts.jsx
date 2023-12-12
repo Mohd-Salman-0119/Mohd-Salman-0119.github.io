@@ -43,7 +43,7 @@ const Contacts = () => {
       );
   };
   return (
-    <div className="text-white" id="contact">
+    <div id="contact">
       <div>
         <h1 className="text-center text-2xl md:text-4xl">Contacts</h1>
         <p className="text-center text-md md:text-xl lg:w-[50%] w-[90%] m-auto mt-2 md:mt-4">
@@ -67,9 +67,9 @@ const Contacts = () => {
 
               <h1 className="contact-phone">+91 8273691527</h1>
             </div>
-            <div className="flex gap-2 items-center text-sm md:text-md font-semibold md:my-2 my-1 text-gray-500">
+            <div className="flex gap-2 items-center text-sm md:text-md font-semibold md:my-2 my-1 text-gray-500 contact-email">
               <MdOutlineMarkEmailRead />
-              <h1>salmanansari910550@gmail.com</h1>
+              <h1 >salmanansari910550@gmail.com</h1>
             </div>
             <div className="flex gap-2 items-center text-sm md:text-md font-semibold md:my-2 my-1 text-gray-500">
               <MdLocationPin />

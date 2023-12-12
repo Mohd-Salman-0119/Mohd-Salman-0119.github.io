@@ -5,13 +5,11 @@ import { education } from "../constants/constants";
 
 const Education = () => {
   return (
-    <div className="text-white my-6 md:my-20" id="education">
+    <div className="my-6 md:my-20" id="education">
       <div>
         <h1 className="text-center text-2xl md:text-4xl">Education</h1>
-        <p className="text-center text-sm md:text-xl md:w-[90%] m-auto mt-2 md:mt-4">
-          Embarking on my educational journey has been a transformative
-          experience, marked by self-discovery and personal growth. Here are the
-          milestones that have shaped my academic path
+        <p className="text-center text-sm md:text-xl md:w-[50%] m-auto mt-2 md:mt-4">
+        My educational journey has been transformative, marked by self-discovery and key milestones.
         </p>
       </div>
 
@@ -23,6 +21,7 @@ const Education = () => {
             course={e.course}
             description={e.description}
             skills={e.skills}
+            Institute={e.Institute}
             key={idx}
           />
         ))}
