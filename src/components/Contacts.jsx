@@ -50,7 +50,7 @@ const Contacts = () => {
           Here are my overall experience.
         </p>
       </div>
-      <div className="md:p-5 p-3 grid md:grid-cols-2 gap-3 border border-blue-900 rounded-md mt-5 justify-center">
+      <div className="md:p-5 p-3 grid md:grid-cols-2 gap-3 border-t border-b border-blue-900 rounded-md mt-5 justify-center shadow-sm shadow-blue-900">
         <div className="md:w-[80%] md:m-auto rounded-md justify-center flex items-center">
           <div className="md:p-5 p-2">
             <img src={contactsImage} className="w-[35%] md:my-3 my-1" />

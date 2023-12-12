@@ -12,7 +12,7 @@ const About = () => {
         </p>
       </div>
       <div
-        className={`flex md:flex-row flex-col justify-center items-center gap-5 border-t border-b border-blue-900 hover:border-gray-500 lg:p-10 p-3 rounded-md transition-all duration-1000 md:my-10 my-5 md:text-2xl text-center md:text-center text-sm`}
+        className={`flex md:flex-row flex-col justify-center items-center gap-5 border-t border-b border-blue-900 hover:border-gray-500 lg:py-20 lg:px-10 p-3 rounded-md transition-all duration-1000 md:my-10 my-5 md:text-2xl text-center md:text-center text-sm shadow-sm shadow-blue-900`}
       >
         <p className="md:w-[90%] font-normal md:leading-9 user-detail-intro">
           A proficient <span className="font-medium text-blue-700">Full Stack Web Developer</span> specializing in <span className="font-medium text-blue-700">MERN Stack</span>,

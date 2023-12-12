@@ -7,6 +7,7 @@ import Education from "./components/Education";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import GitStats from "./components/GitStats";
 
 const App = () => {
   return (
@@ -16,7 +17,9 @@ const App = () => {
         <Hero />
         <About />
         <Skills />
+
         <Projects />
+        <GitStats />
         <Education />
         <Contacts />
       </div>

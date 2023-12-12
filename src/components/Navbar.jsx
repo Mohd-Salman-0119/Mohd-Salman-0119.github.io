@@ -89,13 +89,13 @@ const Navbar = () => {
         )}
       </div>
       {toggleMenu && (
-        <div className="flex flex-col lg:hidden text-lg items-start gap-1 sm:gap-4 py-8 px-10 rounded-md absolute right-8 top-16 z-10 sm:min-w-[221px] bg-glass border-glass shadow-glass backdrop:filter-glass animate-scale-up-center">
+        <div className="flex flex-col lg:hidden text-lg items-start gap-1 py-8 px-10 rounded-md absolute right-8 top-16 z-10 sm:min-w-[221px] bg-glass border-glass shadow-glass backdrop:filter-glass animate-scale-up-center">
           <>
             <Menu />
             <IconButton
               skill="Resume"
               icon={dwonloadIcon}
-              className={"border-gray-500 py-1 lg:flex bg-blue-950 mt-3"}
+              className={"border-gray-500 py-1 lg:flex bg-blue-950 mt-3 nav-link resume"}
               onClick={handleDwonloadResume}
               id={"resume-button-1"}
             />
