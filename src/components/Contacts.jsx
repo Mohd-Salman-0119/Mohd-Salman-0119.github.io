@@ -69,7 +69,7 @@ const Contacts = () => {
             </div>
             <div className="flex gap-2 items-center text-sm md:text-md font-semibold md:my-2 my-1 text-gray-500 contact-email">
               <MdOutlineMarkEmailRead />
-              <h1 >salmanansari910550@gmail.com</h1>
+              <h1 onClick={handleVisitEmail} className="cursor-pointer">salmanansari910550@gmail.com</h1>
             </div>
             <div className="flex gap-2 items-center text-sm md:text-md font-semibold md:my-2 my-1 text-gray-500">
               <MdLocationPin />

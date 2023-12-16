@@ -10,7 +10,7 @@ const GitStats = () => {
           Journey
         </p>
       </div>
-      <div className="border-t border-b flex flex-col gap-3 justify-center items-center border-blue-900 hover:border-gray-500 md:p-8 p-3 rounded-md transition-all duration-1000 ease-in-out shadow-sm shadow-blue-900 group mt-5">
+      <div className="border-t border-b flex flex-col gap-3 justify-center items-center border-blue-900 hover:border-gray-500 md:p-8 p-3 rounded-md transition-all duration-1000 ease-in-out shadow-sm shadow-blue-900 group mt-5 react-activity-calendar">
         <div className="grid grid-cols-2 justify-center border-b border-blue-900">
           <div>
             <img
@@ -31,7 +31,7 @@ const GitStats = () => {
         <div>
           <img
             id="github-streak-stats"
-            src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mohd-Salman-0119&theme=transparent"
+            src="https://github-readme-streak-stats.herokuapp.com?user=Mohd-Salman-0119&theme=transparent&hide_border=true"
             alt="GitHub Streak"
           />
         </div>

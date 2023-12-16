@@ -17,7 +17,6 @@ const App = () => {
         <Hero />
         <About />
         <Skills />
-
         <Projects />
         <GitStats />
         <Education />
