@@ -46,6 +46,10 @@ import hrkImage from './images/hrk.png'
 import computerLogo from './images/compterLogo.jpeg'
 import profile from './profile-pic.png'
 
+// Resume
+import myResume from './Mohd-Salman-Resume.pdf'
+
+
 
 export {
      dwonloadIcon,
@@ -78,10 +82,17 @@ export {
      gpt3Site,
      eyeIcon,
      masaiImage,
-     srgiImage, hrkImage, computerLogo,
+     srgiImage, hrkImage, 
+     computerLogo,
      timeManagement,
      teamWork,
-     contribute, sendEmail, contactsImage, tickIcon,journeyImage,profile
+     contribute, 
+     sendEmail, 
+     contactsImage,
+     tickIcon, 
+     journeyImage,
+     profile, 
+     myResume
 
 
 }

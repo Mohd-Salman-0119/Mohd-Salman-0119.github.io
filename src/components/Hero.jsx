@@ -43,7 +43,7 @@ const Hero = () => {
           results. With a positive mindset and a hunger for growth, I'm geared
           up to make a significant impact and accomplish awesome things.
         </p>
-        <div className="flex gap-5 mt-3 justify-center sm:justify-start">
+        <div className="flex gap-5 mt-5 justify-center sm:justify-start">
           <IconButton
             skill="GitHub"
             icon={githubIcon}

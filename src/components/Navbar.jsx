@@ -50,7 +50,6 @@ const Navbar = () => {
   const handleToggleMenu = () => {
     setToggleMenu((p) => !p);
   };
-  console.log(scrolled);
 
   return (
     <div

@@ -31,7 +31,8 @@ import {
      masaiImage,
      srgiImage,
      hrkImage,
-     computerLogo
+     computerLogo,
+     myResume
 } from "../assets/imports";
 
 export const frontend = [
@@ -236,7 +237,11 @@ export const handleVisitGitHub = () => {
 }
 
 export const handleDwonloadResume = () => {
-     window.open("https://drive.google.com/file/d/1GkDPxJMD1WK7h8YovSlx2HrZ4Cxf6JGS/view?usp=sharing")
+     const ancher = document.createElement("a");
+     ancher.download = "Mohd-Salman-Resume.pdf"
+     ancher.href = myResume;
+     ancher.click();
+     window.open("https://drive.google.com/file/d/1JAZZ8oLZSLgi-XN4Vdj-G59M-an5gXbw/view?usp=sharing", "_blank")
 }
 export const handleVisitEmail = () => {
      window.open("mailto:salmanansari910550@gmail.com")
@@ -244,3 +249,4 @@ export const handleVisitEmail = () => {
 export const handleVisitLinkedIn = () => {
      window.open("https://www.linkedin.com/in/mohd-salman-044599218")
 }
+

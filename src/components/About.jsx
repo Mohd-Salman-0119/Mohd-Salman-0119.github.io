@@ -3,7 +3,7 @@ import { journeyImage } from "../assets/imports";
 
 const About = () => {
   return (
-    <div className="my-8 md:my-20 flex flex-col about section" id="about">
+    <div className="my-8 sm:mt-20 md:mt-32 flex flex-col about section" id="about">
       <div>
         <h1 className="text-center text-2xl md:text-4xl">About Me</h1>
         <p
