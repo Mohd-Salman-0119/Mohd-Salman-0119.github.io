@@ -13,6 +13,7 @@ const Project = (props) => {
     sourceCode,
     liveLink,
     flexRow,
+    disabled,
   } = props;
 
   const handleSourceCode = () => {
@@ -40,8 +41,9 @@ const Project = (props) => {
             <TextButton text={tech} key={index} />
           ))}
         </div>
-        <p className="mt-3 overflow-hidden line-clamp-3 md:line-clamp-none group-hover:line-clamp-none text-sm project-description">{description}</p>
-
+        <p className="mt-3 overflow-hidden line-clamp-3 md:line-clamp-none group-hover:line-clamp-none text-sm project-description">
+          {description}
+        </p>
 
         <div className="flex justify-around items-end gap-5 mt-5">
           <IconButton
@@ -58,6 +60,7 @@ const Project = (props) => {
             className={
               "w-full justify-center border-blue-900 hover:border-gray-500 transition-all duration-1000 ease-in-out sml:text-sm text-[10px] shadow-md project-deployed-link md:gap-2"
             }
+            disabled={disabled}
             onClick={handleLiveLink}
           />
         </div>

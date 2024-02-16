@@ -38,6 +38,7 @@ import woodFansSite from './images/wood-fans.png'
 import wineShopSite from './images/wine-shop.png'
 import educationSite from './images/eduction.png'
 import gpt3Site from './images/gpt3.png'
+import housifyHub from './images/housifyhub.png'
 
 // Education 
 import masaiImage from './images/masai.jpg'
@@ -82,17 +83,18 @@ export {
      gpt3Site,
      eyeIcon,
      masaiImage,
-     srgiImage, hrkImage, 
+     srgiImage, hrkImage,
      computerLogo,
      timeManagement,
      teamWork,
-     contribute, 
-     sendEmail, 
+     contribute,
+     sendEmail,
      contactsImage,
-     tickIcon, 
+     tickIcon,
      journeyImage,
-     profile, 
-     myResume
+     profile,
+     myResume,
+     housifyHub
 
 
 }

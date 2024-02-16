@@ -32,7 +32,8 @@ import {
      srgiImage,
      hrkImage,
      computerLogo,
-     myResume
+     myResume,
+     housifyHub
 } from "../assets/imports";
 
 export const frontend = [
@@ -88,7 +89,7 @@ export const backend = [
           icon: jsonIcon
      },
      {
-          skill: "Mango DB",
+          skill: "Mongo DB",
           icon: mangoDBIcon
      },
      {
@@ -146,6 +147,19 @@ export const tools = [
 
 
 export const projects = [
+     {
+          image: housifyHub,
+          projectName: "Housify Hub",
+          sourceCode: "https://github.com/Mohd-Salman-0119/housify-hub",
+          liveLink: "https://github.com/Mohd-Salman-0119/housify-hub",
+          techStack: [
+               "React", "Redux", "Tailwind CSS", "Razorpay", "Axios", "MongoDB", "Express", "Node.js"
+          ],
+          duration: "December 2023 - Present",
+          flexRow: "lg:flex-row-reverse hidden",
+          description: "HomeHarbor is a MERN app redefining how we discover homes. Seamlessly explore, compare, and connect with diverse housing options, enhancing your journey to finding the perfect dwelling. Elevate your housing search with HomeHarbor, simplifying the process for a more connected living experience.",
+          disabled: true
+     },
      {
           image: woodFansSite,
           projectName: "Wood Fans",
