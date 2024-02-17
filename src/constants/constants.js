@@ -164,8 +164,8 @@ export const projects = [
           image: woodFansSite,
           projectName: "Wood Fans",
           description: "Welcome to Wood Fans, where artistry and practicality unite. We offer a curated selection of sustainable furniture, each piece reflecting superior craftsmanship. With us, you’re not just purchasing furniture, but investing in lifestyle of elegance and comfort. Join us at Wood Fans, and let’s transform your space together.",
-          sourceCode: "https://github.com/Raghavbhati/wood-fans",
-          liveLink: "https://obscene-clam-8417.vercel.app",
+          sourceCode: "https://github.com/Mohd-Salman-0119/wood-fans",
+          liveLink: "https://wood-fans-drab.vercel.app",
           duration: "November-2023 - December-2023",
           techStack: [
                "React", "Redux", "Tailwind CSS", "Firebase", "Razorpay", "Axios"
