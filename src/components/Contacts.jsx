@@ -65,7 +65,7 @@ const Contacts = () => {
             <div className="flex gap-2 items-center text-sm md:text-md font-semibold text-gray-500">
               <MdLocalPhone />
 
-              <h1 id="contact-phone">+91 8273691527</h1>
+              <h1 id="contact-phone">+91 8273691527 | +91 7668264646</h1>
             </div>
             <div className="flex gap-2 items-center text-sm md:text-md font-semibold md:my-2 my-1 text-gray-500 contact-email">
               <MdOutlineMarkEmailRead />
@@ -88,7 +88,7 @@ const Contacts = () => {
                 id="contact-email"
               />
               <CiLinkedin
-                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-[#0077b5] transition-all duration-1000 ease-in-out cursor-pointer"
+                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-blue-800 transition-all duration-1000 ease-in-out cursor-pointer"
                 onClick={handleVisitLinkedIn}
                 id="contact-linkedin"
               />

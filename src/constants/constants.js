@@ -161,6 +161,18 @@ export const projects = [
           disabled: true
      },
      {
+          image: bewakoofSite,
+          projectName: "Bewakoof.com",
+          description: "Welcome to Bewakoof – where style and personality collide in a vibrant online haven. Our eclectic collection celebrates individuality, offering clothes, accessories, and more that know no boundaries. Each piece tells a unique story, resonating with the bold, expressive, and bewakoof spirit within you. Experience fashion beyond limits.",
+          sourceCode: "https://github.com/Mohd-Salman-0119/Bewakoof-Web-Clone",
+          liveLink: "https://bewakoof-gamma.vercel.app/",
+          duration: "Februray-2024 - Present",
+          techStack: [
+               "HTML", "CSS", "Javascript", "Node.js", "Express.js", "MongoDB"
+          ],
+          flexRow: "lg:flex-row-reverse"
+     },
+     {
           image: woodFansSite,
           projectName: "Wood Fans",
           description: "Welcome to Wood Fans, where artistry and practicality unite. We offer a curated selection of sustainable furniture, each piece reflecting superior craftsmanship. With us, you’re not just purchasing furniture, but investing in lifestyle of elegance and comfort. Join us at Wood Fans, and let’s transform your space together.",

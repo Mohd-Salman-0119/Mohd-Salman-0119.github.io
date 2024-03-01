@@ -40,6 +40,7 @@ import educationSite from './images/eduction.png'
 import gpt3Site from './images/gpt3.png'
 import housifyHub from './images/housifyhub.png'
 
+
 // Education 
 import masaiImage from './images/masai.jpg'
 import srgiImage from './images/srgi.jpeg'
