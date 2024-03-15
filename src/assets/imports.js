@@ -6,6 +6,7 @@ import reduxIcon from './icons/redux.png'
 import javascriptIcon from './icons/js.png'
 import javaIcon from './icons/java.png'
 import mangoDBIcon from './icons/mangodb.png'
+import graphql from './icons/graphql.png'
 import nodeIcons from './icons/nodejs.png'
 import expressIcon from './icons/express.png'
 import jsonIcon from './icons/json.png'
@@ -63,6 +64,7 @@ export {
      javascriptIcon,
      javaIcon,
      mangoDBIcon,
+     graphql,
      nodeIcons,
      expressIcon,
      jsonIcon,

@@ -3,7 +3,10 @@ import { journeyImage } from "../assets/imports";
 
 const About = () => {
   return (
-    <div className="my-8 sm:mt-20 md:mt-32 flex flex-col about section" id="about">
+    <div
+      className="my-8 sm:mt-20 md:mt-32 flex flex-col about section"
+      id="about"
+    >
       <div>
         <h1 className="text-center text-2xl md:text-4xl">About Me</h1>
         <p
@@ -30,7 +33,7 @@ const About = () => {
           front-end, and back-end development. Technical expertise spans{" "}
           <span className="font-medium">
             Java, JavaScript, CSS, HTML, REST API, React, Axios, Tailwind CSS,
-            and Node.js Express.
+            Node.js, Express, MongoDB, and GraphQL
           </span>{" "}
           Demonstrated problem-solving prowess with over 500+ DSA problems
           solved. Passionate about crafting efficient and elegant code, with a

@@ -33,7 +33,8 @@ import {
      hrkImage,
      computerLogo,
      myResume,
-     housifyHub
+     housifyHub,
+     graphql
 } from "../assets/imports";
 
 export const frontend = [
@@ -99,6 +100,10 @@ export const backend = [
      {
           skill: "Express Js",
           icon: expressIcon
+     },
+     {
+          skill: "GraphQL",
+          icon: graphql
      },
 
 
