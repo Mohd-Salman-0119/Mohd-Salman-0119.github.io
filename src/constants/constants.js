@@ -130,7 +130,7 @@ export const softSkills = [
           icon: timeManagement
      },
      {
-          skill: "Collabration",
+          skill: "Collaboration",
           icon: contribute
      },
 
@@ -157,7 +157,7 @@ export const tools = [
           icon: replitIcon
      },
      {
-          skill: "CodeSendBox",
+          skill: "CodeSandBox",
           icon: codeBoxIcon
      },
 ]
