@@ -34,13 +34,25 @@ import {
      computerLogo,
      myResume,
      housifyHub,
-     graphql
+     graphql,
+     angularIcon,
+     nextIcon,
+     InspironLabs,
+     internshalaImage
 } from "../assets/imports";
 
 export const frontend = [
      {
           skill: "React Js",
           icon: reactIcon
+     },
+     {
+          skill: "Next Js",
+          icon: nextIcon
+     },
+     {
+          skill: "Angular",
+          icon: angularIcon
      },
      {
           skill: "Redux",
@@ -261,6 +273,25 @@ export const education = [
           skills: "Basic Of Computers"
      },
 
+]
+
+export const experience = [
+     {
+          role: "Software Engineer",
+          company: "InspironLabs Software System Pvt. Ltd.",
+          duration: "March-2024 - Present",
+          description: "Developed scalable applications using Next.js, Angular, and React, collaborating with cross-functional teams to deliver high-quality software solutions.",
+          image: InspironLabs,
+          skills: "Next.js, Angular, Typescirpt, Jest, Material-UI"
+     },
+     {
+          role: "Core Java Intern",
+          company: "Internshala Pvt. Ltd.",
+          duration: "January-2022 - March-2022",
+          description: "Completed intensive 6-week Core Java training at Internshala. Specialized in desktop application development.",
+          image: internshalaImage,
+          skills: "Java, JavaFX, XML"
+     }
 ]
 
 export const handleVisitGitHub = () => {

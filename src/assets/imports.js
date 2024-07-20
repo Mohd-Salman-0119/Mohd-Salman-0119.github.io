@@ -30,6 +30,10 @@ import sendEmail from './icons/send.png'
 import contactsImage from './icons/contact.svg'
 import tickIcon from './icons/tick.png'
 import journeyImage from './images/journey.jpg'
+import angularIcon from './icons/angular.png'
+import nextIcon from './icons/nextjs.png'
+import InspironLabs from './icons/inspironlabs.jpeg'
+
 
 
 
@@ -97,7 +101,8 @@ export {
      journeyImage,
      profile,
      myResume,
-     housifyHub
-
-
+     housifyHub,
+     angularIcon,
+     nextIcon,
+     InspironLabs
 }

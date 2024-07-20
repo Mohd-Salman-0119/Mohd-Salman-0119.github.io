@@ -1,6 +1,7 @@
 import React from "react";
-import { internshalaImage } from "../assets/imports";
-import { HiOutlinePlus } from "react-icons/hi2";
+import { internshalaImage, InspironLabs } from "../assets/imports";
+import ExperienceComponent from "./common/ExperienceComponent";
+import { experience } from "../constants/constants";
 
 const Experience = () => {
   return (
@@ -12,30 +13,17 @@ const Experience = () => {
         </p>
       </div>
       <div className="grid lg:grid-cols-2 gap-5">
-        <div className="border border-blue-900 p-5 rounded-md mt-5 shadow-sm shadow-blue-900">
-          <div className="flex gap-3 items-center">
-            <img src={internshalaImage} className="w-16 h-16 rounded-md" />
-            <div>
-              <h1 className="lg:text-xl text-lg font-semibold text-gray-200">
-                Core Java
-              </h1>
-              <h4 className="lg:text-lg text-md text-gray-500 font-semibold">
-                Internshala Pvt. Ltd.
-              </h4>
-              <p className="text-sm text-gray-500">January-2022 - March-2022</p>
-            </div>
-          </div>
-          <p className="mt-3 text-sm md:text-base">
-            Completed intensive 6-week Core Java training at Internshala.
-            Specialized in desktop application development.
-          </p>
-          <p className="text-gray-500 font-semibold mt-2">
-            <span className="font-bold mr-2">Skills:</span>Core Java, XML
-          </p>
-        </div>
-        <div className="border border-blue-900 p-5 rounded-md mt-5 hidden lg:flex justify-center items-center shadow-sm shadow-blue-900">
-          <HiOutlinePlus className="text-4xl" />
-        </div>
+        {experience.map((item, index) => (
+          <ExperienceComponent
+            key={index}
+            icon={item.image}
+            role={item.role}
+            details={item.description}
+            duration={item.duration}
+            company={item.company}
+            skills={item.skills}
+          />
+        ))}
       </div>
     </div>
   );
