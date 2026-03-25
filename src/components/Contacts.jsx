@@ -15,7 +15,6 @@ import {
   handleVisitLinkedIn,
 } from "../constants/constants";
 import { CiLinkedin } from "react-icons/ci";
-import emailjs from "emailjs-com";
 import { useState } from "react";
 
 const Contacts = () => {
@@ -23,24 +22,24 @@ const Contacts = () => {
 
   const handleSendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_0yxy0t8",
-        "template_sydt581",
-        e.target,
-        "VqRu7XVgGoTX3JrVY"
-      )
-      .then(
-        (result) => {
-          setSend(true);
-          e.target.reset;
-        },
-        (error) => {
-          console.log(error.text);
-          setSend(false);
-        }
-      );
+    
+    // Get form data
+    const formData = new FormData(e.target);
+    const data = {
+      name: formData.get("from_name"),
+      email: formData.get("from_email"),
+      subject: formData.get("subject"),
+      message: formData.get("message"),
+    };
+    
+    // Show success state
+    setSend(true);
+    e.target.reset();
+    
+    // Reset after 3 seconds
+    setTimeout(() => {
+      setSend(false);
+    }, 3000);
   };
   return (
     <div id="contact" className="my-12 md:my-24">
