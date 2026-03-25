@@ -8,12 +8,14 @@ import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import GitStats from "./components/GitStats";
+import { ParticleBackground } from "./components/ParticleBackground";
 
 const App = () => {
   return (
-    <div className="bg-gradient w-full font-sans scroll-smooth text-white">
+    <div className="bg-gradient w-full font-sans scroll-smooth text-slate-100 relative">
+      <ParticleBackground />
       <Navbar />
-      <div className="xl:px-40 lg:px-20 md:px-10 sml:px-5 px-2">
+      <div className="xl:px-40 lg:px-20 md:px-10 sml:px-5 px-2 relative z-10">
         <Hero />
         <About />
         <Skills />

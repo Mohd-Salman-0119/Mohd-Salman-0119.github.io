@@ -2,6 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-     scroll-behavior: smooth;
+:root {
+  --primary: #0f172a;
+  --secondary: #1e293b;
+  --accent: #00d9ff;
+  --accent2: #a78bfa;
+  --accent3: #ec4899;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 50%, #0f172a 100%);
+  color: #e2e8f0;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: transparent;
+  color: #e2e8f0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  color: #f1f5f9;
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 16px;
+}
+
+/* Glow effects */
+.glow-accent {
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+}
+
+.glow-pink {
+  box-shadow: 0 0 30px rgba(236, 72, 153, 0.2);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(0, 217, 255, 0.3);
+  color: #f1f5f9;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00d9ff, #a78bfa);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #00d9ff, #ec4899);
 }

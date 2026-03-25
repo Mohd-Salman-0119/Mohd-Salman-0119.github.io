@@ -5,15 +5,15 @@ import { education } from "../constants/constants";
 
 const Education = () => {
   return (
-    <div className="my-6 md:my-20" id="education">
-      <div>
-        <h1 className="text-center text-2xl md:text-4xl">Education</h1>
-        <p className="text-center text-sm md:text-xl md:w-[50%] m-auto mt-2 md:mt-4">
-        My educational journey has been transformative, marked by self-discovery and key milestones.
+    <div className="my-12 md:my-24" id="education">
+      <div className="mb-12">
+        <h1 className="text-center text-4xl md:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-accent mb-4">Education</h1>
+        <p className="text-center text-lg md:text-xl md:w-[60%] m-auto text-slate-300 leading-relaxed">
+          My educational journey has been transformative, marked by continuous learning and significant milestones.
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-5 mt-5">
+      <div className="grid lg:grid-cols-2 gap-8 mt-8">
         {education.map((e, idx) => (
           <EducationComponent
             image={e.image}

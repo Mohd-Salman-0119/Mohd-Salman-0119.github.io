@@ -43,52 +43,50 @@ const Contacts = () => {
       );
   };
   return (
-    <div id="contact">
-      <div>
-        <h1 className="text-center text-2xl md:text-4xl">Contacts</h1>
-        <p className="text-center text-md md:text-xl lg:w-[50%] w-[90%] m-auto mt-2 md:mt-4">
-          Here are my overall experience.
+    <div id="contact" className="my-12 md:my-24">
+      <div className="mb-12">
+        <h1 className="text-center text-4xl md:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-accent mb-4">Contact Me</h1>
+        <p className="text-center text-lg md:text-xl lg:w-[60%] w-[90%] m-auto text-slate-300 leading-relaxed">
+          Let's connect! I'm always open to new opportunities and collaborations. Feel free to reach out.
         </p>
       </div>
-      <div className="md:p-5 p-3 grid md:grid-cols-2 gap-3 border-t border-b border-blue-900 rounded-md mt-5 justify-center shadow-sm shadow-blue-900">
+      <div className="md:p-8 p-6 grid md:grid-cols-2 gap-8 glass border border-glass rounded-glass justify-center hover:shadow-glow transition-all duration-300">
         <div className="md:w-[80%] md:m-auto rounded-md justify-center flex items-center">
           <div className="md:p-5 p-2">
             <img src={contactsImage} className="w-[35%] md:my-3 my-1" />
-            <h1 className="text-lg md:text-2xl font-semibold md:mt-3">
-              Contacts Us
+            <h1 className="text-2xl md:text-3xl font-display font-bold text-transparent bg-clip-text bg-gradient-accent md:mt-3 mt-2">
+              Get In Touch
             </h1>
-            <p className="md:text-lg text-gray-300 md:my-3 my-2">
-              I'm currently looking for new opportunities, my inbox is always
-              open. Whether you have a question or just want to say hi, I'll try
-              my best to get back to you!
+            <p className="md:text-lg text-slate-300 md:my-3 my-2 leading-relaxed">
+              I'm actively seeking exciting opportunities and collaborations. My inbox is always open 
+              for meaningful conversations, project inquiries, or just a friendly hello!
             </p>
-            <div className="flex gap-2 items-center text-sm md:text-md font-semibold text-gray-500">
-              <MdLocalPhone />
-
+            <div className="flex gap-2 items-center text-sm md:text-md font-medium text-slate-300 md:my-3 my-2">
+              <MdLocalPhone className="text-accent" />
               <h1 id="contact-phone">+91 8273691527 | +91 7668264646</h1>
             </div>
-            <div className="flex gap-2 items-center text-sm md:text-md font-semibold md:my-2 my-1 text-gray-500 contact-email">
-              <MdOutlineMarkEmailRead />
-              <h1 onClick={handleVisitEmail} className="cursor-pointer">salmanansari910550@gmail.com</h1>
+            <div className="flex gap-2 items-center text-sm md:text-md font-medium text-slate-300 contact-email">
+              <MdOutlineMarkEmailRead className="text-accent2" />
+              <h1 onClick={handleVisitEmail} className="cursor-pointer hover:text-accent transition-colors">salmanansari910550@gmail.com</h1>
             </div>
-            <div className="flex gap-2 items-center text-sm md:text-md font-semibold md:my-2 my-1 text-gray-500">
-              <MdLocationPin />
+            <div className="flex gap-2 items-center text-sm md:text-md font-medium text-slate-300 md:my-3 my-2">
+              <MdLocationPin className="text-accent3" />
               <h1>Pilibhit, Uttar Pradesh</h1>
             </div>
-            <div className="flex gap-3 text-xl md:text-3xl my-3 md:my-5">
+            <div className="flex gap-4 text-2xl md:text-3xl my-6">
               <FaGithub
-                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-glass transition-all duration-1000 ease-in-out cursor-pointer"
+                className="text-slate-300 hover:text-accent hover:scale-125 rounded-lg p-2 transition-all duration-300 cursor-pointer hover:bg-glass"
                 onClick={handleVisitGitHub}
                 id="contact-github"
               />
 
               <MdEmail
-                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-[#F05941] transition-all duration-1000 ease-in-out cursor-pointer"
+                className="text-slate-300 hover:text-accent2 hover:scale-125 rounded-lg p-2 transition-all duration-300 cursor-pointer hover:bg-glass"
                 onClick={handleVisitEmail}
                 id="contact-email"
               />
               <CiLinkedin
-                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-blue-800 transition-all duration-1000 ease-in-out cursor-pointer"
+                className="text-slate-300 hover:text-accent3 hover:scale-125 rounded-lg p-2 transition-all duration-300 cursor-pointer hover:bg-glass"
                 onClick={handleVisitLinkedIn}
                 id="contact-linkedin"
               />
@@ -96,55 +94,55 @@ const Contacts = () => {
           </div>
         </div>
         <form
-          className="text-white md:p-5 p-3 justify-center rounded-md flex flex-col gap-3 items-end md:mt-5 mt-2"
+          className="text-slate-300 md:p-6 p-4 justify-center rounded-glass flex flex-col gap-4 items-end"
           onSubmit={handleSendEmail}
         >
-          <div className="py-2 px-3 flex gap-2 items-center rounded-md border-blue-900 border w-[100%]">
-            <FaUser />
+          <div className="py-3 px-4 flex gap-3 items-center rounded-lg border-accent border bg-glass w-full hover:border-accent2 transition-colors">
+            <FaUser className="text-accent" />
             <input
               text="text"
-              placeholder="Name"
+              placeholder="Your Name"
               name="from_name"
-              className="bg-transparent outline-none"
+              className="bg-transparent outline-none w-full text-slate-300 placeholder-slate-500"
               required
             />
           </div>
-          <div className="py-2 px-3 flex gap-2 items-center rounded-md border-blue-900 border w-[100%]">
-            <MdEmail />
+          <div className="py-3 px-4 flex gap-3 items-center rounded-lg border-accent border bg-glass w-full hover:border-accent2 transition-colors">
+            <MdEmail className="text-accent" />
             <input
               text="email"
-              placeholder="Email"
+              placeholder="Your Email"
               name="from_email"
-              className="bg-transparent outline-none"
+              className="bg-transparent outline-none w-full text-slate-300 placeholder-slate-500"
               required
             />
           </div>
-          <div className="py-2 px-3 flex gap-2 items-center rounded-md border-blue-900 border w-[100%]">
-            <MdEventNote />
+          <div className="py-3 px-4 flex gap-3 items-center rounded-lg border-accent border bg-glass w-full hover:border-accent2 transition-colors">
+            <MdEventNote className="text-accent" />
             <input
               text="text"
               placeholder="Subject"
               name="subject"
-              className="bg-transparent outline-none"
+              className="bg-transparent outline-none w-full text-slate-300 placeholder-slate-500"
               required
             />
           </div>
           <textarea
             cols="4"
             rows="5"
-            placeholder="Message"
+            placeholder="Your Message"
             name="message"
-            className="w-full rounded-md p-2 bg-transparent outline-none border-blue-900 border"
+            className="w-full rounded-lg p-3 bg-glass outline-none border border-accent text-slate-300 placeholder-slate-500 hover:border-accent2 transition-colors"
             required
           />
           <button
-            className={`w-full justify-center border-blue-900 cursor-pointer flex flex-row-reverse gap-1 md:gap-3 items-center rounded-md py-2 border px-3 hover:bg-glass hover:border-gray-500 transition-all duration-1000 ease-in-out`}
+            className={`w-full justify-center border-accent cursor-pointer flex flex-row-reverse gap-2 items-center rounded-lg py-3 border px-4 bg-glass hover:bg-accent hover:text-primary transition-all duration-300`}
             text="submit"
           >
-            {send ? "Sended" : "Send"}
+            {send ? "Message Sent!" : "Send Message"}
             <img
               src={send ? tickIcon : sendEmail}
-              className="text-lg md:w-8 sml:w-6 w-5 transition-all duration-500 ease-in-out"
+              className="w-5 md:w-6 transition-all duration-500"
             />
           </button>
         </form>

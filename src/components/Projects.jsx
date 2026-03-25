@@ -18,17 +18,16 @@ import Project from "./common/Project";
 const Projects = () => {
   const navigate = useNavigate();
   return (
-    <div className="my-6 md:my-20" id="projects">
-      <div>
-        <h1 className="text-center text-2xl md:text-4xl">Projects</h1>
-        <p className="text-center text-sm md:text-xl md:w-[90%] m-auto mt-2 md:mt-4">
-          I have had the privilege of working on a diverse range of projects,
-          both as a contributing team member and in a solo capacity. Here are
-          some of the significant projects that I’ve been involved in
+    <div className="my-12 md:my-24" id="projects">
+      <div className="mb-12">
+        <h1 className="text-center text-4xl md:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-accent mb-4">Projects</h1>
+        <p className="text-center text-lg md:text-xl md:w-[90%] m-auto text-slate-300 leading-relaxed">
+          I've had the privilege of working on diverse projects that showcase innovation and technical excellence. 
+          Here are some of my most significant creations that demonstrate my capabilities as a developer.
         </p>
       </div>
 
-      <div className="mt-5 grid gap-5">
+      <div className="mt-8 grid gap-8">
         {projects.map((project, index) => {
           return (
             <Project

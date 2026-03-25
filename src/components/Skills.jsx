@@ -21,16 +21,16 @@ import Skill from "./common/Skill";
 
 const Skills = () => {
   return (
-    <div className="my-8 md:my-20 flex flex-col" id="skills">
-      <div>
-        <h1 className="text-center text-2xl md:text-4xl">Skills</h1>
-        <p className="text-center text-md md:text-xl lg:w-[50%] w-[100%] m-auto mt-2 md:mt-4">
-          Here are some of my skills on which I have been working on for the
-          past 1 years.
+    <div className="my-12 md:my-24 flex flex-col" id="skills">
+      <div className="mb-12">
+        <h1 className="text-center text-4xl md:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-accent mb-4">Skills</h1>
+        <p className="text-center text-lg md:text-xl lg:w-[60%] w-[100%] m-auto text-slate-300 leading-relaxed">
+          A comprehensive collection of technologies and tools I've mastered over my development journey. 
+          Each skill represents hands-on experience and continuous learning.
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-5 mt-5 justify-center">
+      <div className="grid lg:grid-cols-2 gap-8 mt-8">
         <Skill text="Frontend" array={frontend} />
         <Skill text="Backend" array={backend} />
         <Skill text="Tools" array={tools} />

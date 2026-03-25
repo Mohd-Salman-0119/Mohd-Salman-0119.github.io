@@ -25,7 +25,7 @@ import eyeIcon from './icons/see.png'
 import timeManagement from './images/timemanagement.png'
 import teamWork from './images/team.png'
 import contribute from './images/contribute.png'
-import dwonloadIcon from './icons/dwonload.png'
+import downloadIcon from './icons/dwonload.png'
 import sendEmail from './icons/send.png'
 import contactsImage from './icons/contact.svg'
 import tickIcon from './icons/tick.png'
@@ -59,7 +59,7 @@ import myResume from './Mohd-Salman-Resume.pdf'
 
 
 export {
-     dwonloadIcon,
+     downloadIcon,
      reactIcon,
      htmlIcon,
      cssIcon,

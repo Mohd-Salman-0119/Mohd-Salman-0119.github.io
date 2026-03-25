@@ -3,16 +3,16 @@ import IconButton from "../IconButton";
 
 const Skill = ({ text, array }) => {
   return (
-    <div className="border-t border-b border-blue-900 flex justify-center flex-col items-center rounded-md p-5 shadow-sm shadow-blue-900 skills-card">
-      <h1 className="text-2xl">{text}</h1>
-      <div className="flex flex-wrap gap-3 justify-center mt-4">
+    <div className="glass border border-glass rounded-glass p-8 hover:shadow-glow transition-all duration-300 skills-card group">
+      <h1 className="text-3xl font-display font-bold text-transparent bg-clip-text bg-gradient-accent mb-6 text-center">{text}</h1>
+      <div className="flex flex-wrap gap-4 justify-center">
         {array?.map((e, idx) => {
           return (
             <IconButton
               key={idx}
               skill={e.skill}
               icon={e.icon}
-              className={"border-gray-500 skills-card-name"}
+              className={"border-accent text-accent hover:bg-accent hover:text-primary transition-all rounded-lg p-2 skills-card-name group-hover:scale-110"}
               imgClass={"skills-card-img"}
             />
           );

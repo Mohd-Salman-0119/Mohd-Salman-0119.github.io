@@ -5,14 +5,14 @@ import { experience } from "../constants/constants";
 
 const Experience = () => {
   return (
-    <div className="text-white" id="experience">
-      <div>
-        <h1 className="text-center text-2xl md:text-4xl">Experience</h1>
-        <p className="text-center text-md md:text-xl lg:w-[50%] w-[90%] m-auto mt-2 md:mt-4">
-          Here are my overall experience.
+    <div className="my-12 md:my-24" id="experience">
+      <div className="mb-12">
+        <h1 className="text-center text-4xl md:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-accent mb-4">Experience</h1>
+        <p className="text-center text-lg md:text-xl lg:w-[60%] w-[90%] m-auto text-slate-300 leading-relaxed">
+          My professional journey showcasing real-world project experience and continuous growth.
         </p>
       </div>
-      <div className="grid lg:grid-cols-2 gap-5">
+      <div className="grid lg:grid-cols-2 gap-8 mt-8">
         {experience.map((item, index) => (
           <ExperienceComponent
             key={index}

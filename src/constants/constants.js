@@ -183,7 +183,7 @@ export const projects = [
           description: "Welcome to Bewakoof – where style and personality collide in a vibrant online haven. Our eclectic collection celebrates individuality, offering clothes, accessories, and more that know no boundaries. Each piece tells a unique story, resonating with the bold, expressive, and bewakoof spirit within you. Experience fashion beyond limits.",
           sourceCode: "https://github.com/Mohd-Salman-0119/Bewakoof-Web-Clone",
           liveLink: "https://bewakoof-gamma.vercel.app/",
-          duration: "Februray-2024 - Present",
+          duration: "February-2024 - Present",
           techStack: [
                "HTML", "CSS", "Javascript", "Node.js", "Express.js", "MongoDB"
           ],
@@ -215,7 +215,7 @@ export const projects = [
      },
      {
           image: educationSite,
-          projectName: "Eduction Websiite",
+          projectName: "Education Website",
           description: "Welcome to our educational hub, a catalyst for intellectual growth. Dive into our curated resources, providing a foundation for learning. Your feedback is invaluable as we continually refine and improve. Join us on this enlightening journey of discovery.",
           sourceCode: "https://github.com/Mohd-Salman-0119/Education-Website",
           liveLink: "https://creative-maamoul-4e79b9.netlify.app",
@@ -298,11 +298,11 @@ export const handleVisitGitHub = () => {
      window.open("https://github.com/Mohd-Salman-0119", "_blank")
 }
 
-export const handleDwonloadResume = () => {
-     const ancher = document.createElement("a");
-     ancher.download = "Mohd-Salman-Resume.pdf"
-     ancher.href = myResume;
-     ancher.click();
+export const handleDownloadResume = () => {
+     const anchor = document.createElement("a");
+     anchor.download = "Mohd-Salman-Resume.pdf"
+     anchor.href = myResume;
+     anchor.click();
      window.open("https://drive.google.com/file/d/1JAZZ8oLZSLgi-XN4Vdj-G59M-an5gXbw/view?usp=sharing", "_blank")
 }
 export const handleVisitEmail = () => {
