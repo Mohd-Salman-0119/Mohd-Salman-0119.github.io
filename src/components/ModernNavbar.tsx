@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { HiMenuAlt3, HiOutlineX } from "react-icons/hi";
 import { BsDownload } from "react-icons/bs";
-import { motion } from "framer-motion";
 import { handleDwonloadResume } from "../constants/constants";
 
 const ModernNavbar: React.FC = () => {
@@ -27,131 +26,144 @@ const ModernNavbar: React.FC = () => {
     { label: "Contact", href: "#contact" },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: -10 },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
-
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`sticky top-0 z-50 transition-smooth ${
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-lg"
+          ? "bg-background/80 border-b border-border backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
+      <style jsx>{`
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-100px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        nav {
+          animation: slideDown 0.5s ease-out;
+        }
+
+        .nav-link {
+          position: relative;
+          transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: var(--primary);
+          transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+          width: 100%;
+        }
+
+        .nav-link:hover {
+          color: var(--primary);
+        }
+
+        .menu-toggle {
+          transition: all 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+          color: var(--primary);
+        }
+
+        .mobile-menu {
+          animation: slideDown 0.3s ease-out;
+        }
+      `}</style>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 text-2xl font-bold"
-          >
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-background font-bold text-xl">MS</span>
-            </div>
-            <span className="gradient-text hidden sm:inline">Mohd Salman</span>
-          </motion.div>
+          <div className="flex-shrink-0">
+            <a href="#home" className="text-2xl font-bold gradient-text">
+              MS
+            </a>
+          </div>
 
           {/* Desktop Navigation */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="hidden lg:flex items-center gap-1"
-          >
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <motion.a
+              <a
                 key={item.label}
-                variants={itemVariants}
                 href={item.href}
-                className="nav-link px-4 py-2 rounded-lg hover:bg-card transition-smooth"
+                className="nav-link text-foreground text-sm font-medium"
               >
                 {item.label}
-              </motion.a>
+              </a>
             ))}
-          </motion.div>
+          </div>
 
-          {/* Resume Button */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handleDwonloadResume}
-            className="hidden lg:flex items-center gap-2 btn-modern"
-          >
-            <BsDownload size={18} />
-            Resume
-          </motion.button>
+          {/* CTA Button - Desktop */}
+          <div className="hidden md:flex">
+            <button
+              onClick={handleDwonloadResume}
+              className="btn-modern inline-flex items-center gap-2"
+            >
+              <BsDownload size={18} />
+              Resume
+            </button>
+          </div>
 
           {/* Mobile Menu Button */}
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setToggleMenu(!toggleMenu)}
-            className="lg:hidden text-primary text-2xl"
-          >
-            {toggleMenu ? <HiOutlineX /> : <HiMenuAlt3 />}
-          </motion.button>
+          <div className="md:hidden">
+            <button
+              onClick={() => setToggleMenu(!toggleMenu)}
+              className="menu-toggle text-foreground"
+            >
+              {toggleMenu ? (
+                <HiOutlineX size={28} />
+              ) : (
+                <HiMenuAlt3 size={28} />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {toggleMenu && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden pb-6 border-t border-border"
-          >
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className="flex flex-col gap-2 pt-4"
-            >
+          <div className="mobile-menu md:hidden pb-6 border-t border-border">
+            <div className="space-y-3">
               {navItems.map((item) => (
-                <motion.a
+                <a
                   key={item.label}
-                  variants={itemVariants}
                   href={item.href}
+                  className="block px-4 py-2 text-foreground hover:text-primary transition-colors rounded-lg hover:bg-primary/10"
                   onClick={() => setToggleMenu(false)}
-                  className="nav-link px-4 py-3 rounded-lg hover:bg-card transition-smooth"
                 >
                   {item.label}
-                </motion.a>
+                </a>
               ))}
-              <motion.button
-                variants={itemVariants}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={handleDwonloadResume}
-                className="flex items-center justify-center gap-2 btn-modern mt-4 w-full"
+              <button
+                onClick={() => {
+                  handleDwonloadResume();
+                  setToggleMenu(false);
+                }}
+                className="w-full btn-modern inline-flex items-center justify-center gap-2"
               >
                 <BsDownload size={18} />
                 Resume
-              </motion.button>
-            </motion.div>
-          </motion.div>
+              </button>
+            </div>
+          </div>
         )}
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 
