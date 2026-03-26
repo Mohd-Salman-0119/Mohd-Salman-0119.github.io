@@ -6,29 +6,33 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient': 'radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%)',
-        'instagram': 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)',
-        'email-color':""
-      },
-      backgroundColor: {
-        'glass': 'rgba(30, 58, 138, 0.9)',
+      colors: {
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        card: 'var(--card)',
+        'card-foreground': 'var(--card-foreground)',
+        primary: 'var(--primary)',
+        'primary-dark': 'var(--primary-dark)',
+        'primary-light': 'var(--primary-light)',
+        secondary: 'var(--secondary)',
+        'secondary-dark': 'var(--secondary-dark)',
+        accent: 'var(--accent)',
+        'accent-dark': 'var(--accent-dark)',
+        muted: 'var(--muted)',
+        'muted-foreground': 'var(--muted-foreground)',
+        border: 'var(--border)',
+        ring: 'var(--ring)',
       },
       borderRadius: {
-        'glass': '16px',
+        lg: 'var(--radius)',
       },
-      boxShadow: {
-        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
       },
-      backdropFilter: {
-        'glass': 'blur(5.1px)',
-        'webkit-glass': '-webkit-blur(5.1px)',
-      },
-      borderWidth: {
-        'glass': '1px',
-      },
-      borderColor: {
-        'glass': 'rgba(160, 156, 216, 1)',
+      backgroundImage: {
+        'gradient': 'linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%)',
+        'instagram': 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)',
       },
       screens: {
         'sml': '350px',
@@ -52,16 +56,7 @@ module.exports = {
             opacity: '1',
           },
         },
-      },
-      animation: {
-        'scale-up-center': 'scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both',
-      },
-    },
-  },
-  plugins: [
-    function ({ addBase, addUtilities, variants, theme }) {
-      addBase({
-        '@keyframes floating': {
+        floating: {
           '0%': {
             transform: 'translate(0, 0px)',
           },
@@ -72,21 +67,12 @@ module.exports = {
             transform: 'translate(0, -0px)',
           },
         },
-      });
-
-      addUtilities(
-        {
-          '.animate-floating': {
-            animationName: 'floating',
-            animationDuration: '3s',
-            animationIterationCount: 'infinite',
-            animationTimingFunction: 'ease-in-out',
-          },
-        },
-        variants('animation')
-      );
+      },
+      animation: {
+        'scale-up-center': 'scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both',
+        floating: 'floating 3s ease-in-out infinite',
+      },
     },
-    
-   
-  ],
+  },
+  plugins: [],
 }

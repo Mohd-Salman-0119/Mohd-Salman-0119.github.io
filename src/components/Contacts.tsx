@@ -1,5 +1,5 @@
 import React, { useState, FormEvent } from "react";
-import { contactsImage, sendEmail, tickIcon } from "../assets/imports";
+import { motion } from "framer-motion";
 import {
   MdEventNote,
   MdLocalPhone,
@@ -8,6 +8,7 @@ import {
 } from "react-icons/md";
 import { FaGithub, FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { BsArrowRight } from "react-icons/bs";
 
 import {
   handleVisitEmail,
@@ -19,9 +20,11 @@ import emailjs from "emailjs-com";
 
 const Contacts: React.FC = () => {
   const [send, setSend] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleSendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
 
     emailjs
       .sendForm(
@@ -33,127 +36,234 @@ const Contacts: React.FC = () => {
       .then(
         (result) => {
           setSend(true);
+          setIsLoading(false);
           e.currentTarget.reset();
+          setTimeout(() => setSend(false), 3000);
         },
         (error) => {
           console.log(error.text);
           setSend(false);
+          setIsLoading(false);
         }
       );
   };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const contactInfo = [
+    { icon: MdLocalPhone, text: "+91 8273691527", id: "contact-phone" },
+    { icon: MdEmail, text: "salmanansari910550@gmail.com", id: "contact-email" },
+    { icon: MdLocationPin, text: "Pilibhit, Uttar Pradesh", id: "location" },
+  ];
+
+  const socialLinks = [
+    { icon: FaGithub, onClick: handleVisitGitHub, id: "contact-github", label: "GitHub" },
+    { icon: MdEmail, onClick: handleVisitEmail, id: "contact-email-btn", label: "Email" },
+    { icon: CiLinkedin, onClick: handleVisitLinkedIn, id: "contact-linkedin", label: "LinkedIn" },
+  ];
+
   return (
-    <div id="contact">
-      <div>
-        <h1 className="text-center text-2xl md:text-4xl">Contacts</h1>
-        <p className="text-center text-md md:text-xl lg:w-[50%] w-[90%] m-auto mt-2 md:mt-4">
-          Here are my overall experience.
-        </p>
-      </div>
-      <div className="md:p-5 p-3 grid md:grid-cols-2 gap-3 border-t border-b border-blue-900 rounded-md mt-5 justify-center shadow-sm shadow-blue-900">
-        <div className="md:w-[80%] md:m-auto rounded-md justify-center flex items-center">
-          <div className="md:p-5 p-2">
-            <img src={contactsImage} className="w-[35%] md:my-3 my-1" />
-            <h1 className="text-lg md:text-2xl font-semibold md:mt-3">
-              Contacts Us
-            </h1>
-            <p className="md:text-lg text-gray-300 md:my-3 my-2">
-              I&apos;m currently looking for new opportunities, my inbox is
-              always open. Whether you have a question or just want to say hi,
-              I&apos;ll try my best to get back to you!
-            </p>
-            <div className="flex gap-2 items-center text-sm md:text-md font-semibold text-gray-500">
-              <MdLocalPhone />
-
-              <h1 id="contact-phone">+91 8273691527 | +91 7668264646</h1>
-            </div>
-            <div className="flex gap-2 items-center text-sm md:text-md font-semibold md:my-2 my-1 text-gray-500 contact-email">
-              <MdOutlineMarkEmailRead />
-              <h1
-                onClick={handleVisitEmail}
-                className="cursor-pointer"
-              >
-                salmanansari910550@gmail.com
-              </h1>
-            </div>
-            <div className="flex gap-2 items-center text-sm md:text-md font-semibold md:my-2 my-1 text-gray-500">
-              <MdLocationPin />
-              <h1>Pilibhit, Uttar Pradesh</h1>
-            </div>
-            <div className="flex gap-3 text-xl md:text-3xl my-3 md:my-5">
-              <FaGithub
-                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-glass transition-all duration-1000 ease-in-out cursor-pointer"
-                onClick={handleVisitGitHub}
-                id="contact-github"
-              />
-
-              <MdEmail
-                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-[#F05941] transition-all duration-1000 ease-in-out cursor-pointer"
-                onClick={handleVisitEmail}
-                id="contact-email"
-              />
-              <CiLinkedin
-                className="hover:scale-125 border-blue-900 hover:border-gray-500 rounded-md hover:bg-blue-800 transition-all duration-1000 ease-in-out cursor-pointer"
-                onClick={handleVisitLinkedIn}
-                id="contact-linkedin"
-              />
-            </div>
-          </div>
-        </div>
-        <form
-          className="text-white md:p-5 p-3 justify-center rounded-md flex flex-col gap-3 items-end md:mt-5 mt-2"
-          onSubmit={handleSendEmail}
+    <motion.section
+      id="contact"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true, amount: 0.3 }}
+      className="py-20 md:py-32"
+    >
+      {/* Header */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="mb-16"
+      >
+        <motion.h2 variants={itemVariants} className="section-title text-center">
+          Get In <span className="gradient-text">Touch</span>
+        </motion.h2>
+        <motion.p
+          variants={itemVariants}
+          className="text-center text-lg text-muted-foreground max-w-2xl mx-auto mt-4"
         >
-          <div className="py-2 px-3 flex gap-2 items-center rounded-md border-blue-900 border w-[100%]">
-            <FaUser />
-            <input
-              type="text"
-              placeholder="Name"
-              name="from_name"
-              className="bg-transparent outline-none w-full"
+          I&apos;m always open to new opportunities and interesting projects. Feel free to reach out!
+        </motion.p>
+      </motion.div>
+
+      {/* Contact Grid */}
+      <div className="grid md:grid-cols-2 gap-12">
+        {/* Contact Info */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="space-y-8"
+        >
+          <motion.div variants={itemVariants} className="card-modern">
+            <h3 className="text-2xl font-bold mb-6 text-foreground">
+              Let&apos;s Connect
+            </h3>
+            <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+              I&apos;m currently looking for new opportunities and exciting projects. My inbox is always open for collaboration, questions, or just to say hello!
+            </p>
+
+            {/* Contact Details */}
+            <div className="space-y-4">
+              {contactInfo.map((info) => {
+                const Icon = info.icon;
+                return (
+                  <motion.div
+                    key={info.id}
+                    whileHover={{ x: 5 }}
+                    className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                  >
+                    <div className="p-3 bg-primary/10 rounded-lg">
+                      <Icon size={24} className="text-primary" />
+                    </div>
+                    <span className="text-lg">{info.text}</span>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* Social Links */}
+            <div className="mt-8 pt-8 border-t border-border/50">
+              <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
+              <div className="flex gap-4">
+                {socialLinks.map(({ icon: Icon, onClick, id, label }) => (
+                  <motion.button
+                    key={id}
+                    whileHover={{ scale: 1.15, rotate: 10 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={onClick}
+                    id={id}
+                    title={label}
+                    className="p-4 bg-primary/10 border border-primary/30 rounded-lg text-primary hover:border-primary hover:bg-primary/20 transition-colors"
+                  >
+                    <Icon size={24} />
+                  </motion.button>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Contact Form */}
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="card-modern"
+        >
+          <h3 className="text-2xl font-bold mb-6 text-foreground">Send Me a Message</h3>
+
+          <form onSubmit={handleSendEmail} className="space-y-4">
+            {/* Name Input */}
+            <div className="relative">
+              <div className="absolute left-4 top-4 text-primary">
+                <FaUser size={18} />
+              </div>
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="from_name"
+                className="w-full pl-12 pr-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                required
+              />
+            </div>
+
+            {/* Email Input */}
+            <div className="relative">
+              <div className="absolute left-4 top-4 text-primary">
+                <MdEmail size={18} />
+              </div>
+              <input
+                type="email"
+                placeholder="Your Email"
+                name="from_email"
+                className="w-full pl-12 pr-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                required
+              />
+            </div>
+
+            {/* Subject Input */}
+            <div className="relative">
+              <div className="absolute left-4 top-4 text-primary">
+                <MdEventNote size={18} />
+              </div>
+              <input
+                type="text"
+                placeholder="Subject"
+                name="subject"
+                className="w-full pl-12 pr-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                required
+              />
+            </div>
+
+            {/* Message Textarea */}
+            <textarea
+              placeholder="Your Message"
+              name="message"
+              rows={5}
+              className="w-full p-4 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
               required
             />
-          </div>
-          <div className="py-2 px-3 flex gap-2 items-center rounded-md border-blue-900 border w-[100%]">
-            <MdEmail />
-            <input
-              type="email"
-              placeholder="Email"
-              name="from_email"
-              className="bg-transparent outline-none w-full"
-              required
-            />
-          </div>
-          <div className="py-2 px-3 flex gap-2 items-center rounded-md border-blue-900 border w-[100%]">
-            <MdEventNote />
-            <input
-              type="text"
-              placeholder="Subject"
-              name="subject"
-              className="bg-transparent outline-none w-full"
-              required
-            />
-          </div>
-          <textarea
-            cols={4}
-            rows={5}
-            placeholder="Message"
-            name="message"
-            className="w-full rounded-md p-2 bg-transparent outline-none border-blue-900 border"
-            required
-          />
-          <button
-            type="submit"
-            className={`w-full justify-center border-blue-900 cursor-pointer flex flex-row-reverse gap-1 md:gap-3 items-center rounded-md py-2 border px-3 hover:bg-glass hover:border-gray-500 transition-all duration-1000 ease-in-out`}
-          >
-            {send ? "Sended" : "Send"}
-            <img
-              src={send ? tickIcon : sendEmail}
-              className="text-lg md:w-8 sml:w-6 w-5 transition-all duration-500 ease-in-out"
-            />
-          </button>
-        </form>
+
+            {/* Submit Button */}
+            <motion.button
+              type="submit"
+              disabled={isLoading}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className={`w-full py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all ${
+                send
+                  ? "bg-green-500 text-background"
+                  : "btn-modern"
+              } disabled:opacity-50 disabled:cursor-not-allowed`}
+            >
+              {isLoading ? (
+                <>
+                  <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                  Sending...
+                </>
+              ) : send ? (
+                <>
+                  Message Sent! ✓
+                </>
+              ) : (
+                <>
+                  Send Message
+                  <BsArrowRight />
+                </>
+              )}
+            </motion.button>
+          </form>
+        </motion.div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 
