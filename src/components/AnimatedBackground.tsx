@@ -1,101 +1,104 @@
-import React, { useRef, useEffect } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Sphere, OrbitControls } from "@react-three/drei";
-import * as THREE from "three";
-
-interface FloatingGeometryProps {
-  position: [number, number, number];
-  color: string;
-  speed: number;
-  scale: number;
-}
-
-const FloatingGeometry: React.FC<FloatingGeometryProps> = ({
-  position,
-  color,
-  speed,
-  scale,
-}) => {
-  const meshRef = useRef<THREE.Mesh>(null);
-  const initialPosition = useRef(position);
-
-  useFrame(({ clock }) => {
-    if (meshRef.current) {
-      meshRef.current.position.y =
-        initialPosition.current[1] + Math.sin(clock.elapsedTime * speed) * 0.5;
-      meshRef.current.rotation.x += 0.001 * speed;
-      meshRef.current.rotation.y += 0.001 * speed;
-    }
-  });
-
-  return (
-    <Sphere
-      ref={meshRef}
-      args={[1, 32, 32]}
-      position={position}
-      scale={scale}
-    >
-      <meshPhongMaterial
-        color={color}
-        emissive={color}
-        emissiveIntensity={0.5}
-        wireframe={false}
-      />
-    </Sphere>
-  );
-};
-
-const AnimatedSceneContent: React.FC = () => {
-  return (
-    <>
-      <OrbitControls autoRotate autoRotateSpeed={0.5} />
-      
-      <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} intensity={1} />
-      <pointLight position={[-10, -10, 10]} intensity={0.5} color="#00d4ff" />
-      <pointLight position={[0, 0, -10]} intensity={0.5} color="#ff006e" />
-
-      {/* Floating geometries */}
-      <FloatingGeometry
-        position={[-3, 2, 0]}
-        color="#00d4ff"
-        speed={0.5}
-        scale={1}
-      />
-      <FloatingGeometry
-        position={[3, 0, 0]}
-        color="#ff006e"
-        speed={0.3}
-        scale={0.8}
-      />
-      <FloatingGeometry
-        position={[0, -2, 2]}
-        color="#00f5ff"
-        speed={0.7}
-        scale={0.6}
-      />
-      <FloatingGeometry
-        position={[-2, 1, -2]}
-        color="#00d4ff"
-        speed={0.4}
-        scale={0.7}
-      />
-      <FloatingGeometry
-        position={[2, -1, 2]}
-        color="#ff006e"
-        speed={0.6}
-        scale={0.5}
-      />
-    </>
-  );
-};
+import React from "react";
 
 const AnimatedBackground: React.FC = () => {
   return (
-    <div className="fixed inset-0 -z-10 opacity-30">
-      <Canvas camera={{ position: [0, 0, 8], fov: 75 }}>
-        <AnimatedSceneContent />
-      </Canvas>
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+      {/* Base gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-card to-background" />
+
+      {/* Animated floating orbs */}
+      <div className="absolute inset-0">
+        {/* Orb 1 - Top left with cyan glow */}
+        <div
+          className="absolute w-96 h-96 rounded-full blur-3xl"
+          style={{
+            background: "radial-gradient(circle, rgba(0, 212, 255, 0.3) 0%, transparent 70%)",
+            top: "-50px",
+            left: "-50px",
+            animation: "float 8s ease-in-out infinite",
+          }}
+        />
+
+        {/* Orb 2 - Top right with pink glow */}
+        <div
+          className="absolute w-80 h-80 rounded-full blur-3xl"
+          style={{
+            background: "radial-gradient(circle, rgba(255, 0, 110, 0.25) 0%, transparent 70%)",
+            top: "50px",
+            right: "-30px",
+            animation: "float 10s ease-in-out infinite reverse",
+          }}
+        />
+
+        {/* Orb 3 - Center with accent glow */}
+        <div
+          className="absolute w-72 h-72 rounded-full blur-3xl"
+          style={{
+            background: "radial-gradient(circle, rgba(0, 245, 255, 0.2) 0%, transparent 70%)",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            animation: "float 12s ease-in-out infinite",
+          }}
+        />
+
+        {/* Orb 4 - Bottom right with gradient glow */}
+        <div
+          className="absolute w-96 h-96 rounded-full blur-3xl"
+          style={{
+            background: "radial-gradient(circle, rgba(0, 212, 255, 0.2) 0%, rgba(255, 0, 110, 0.1) 100%)",
+            bottom: "-50px",
+            right: "-30px",
+            animation: "float 9s ease-in-out infinite reverse",
+          }}
+        />
+
+        {/* Animated grid pattern overlay */}
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `
+              linear-gradient(0deg, transparent 24%, rgba(0, 212, 255, 0.1) 25%, rgba(0, 212, 255, 0.1) 26%, transparent 27%, transparent 74%, rgba(0, 212, 255, 0.1) 75%, rgba(0, 212, 255, 0.1) 76%, transparent 77%, transparent),
+              linear-gradient(90deg, transparent 24%, rgba(0, 212, 255, 0.1) 25%, rgba(0, 212, 255, 0.1) 26%, transparent 27%, transparent 74%, rgba(0, 212, 255, 0.1) 75%, rgba(0, 212, 255, 0.1) 76%, transparent 77%, transparent)
+            `,
+            backgroundSize: "50px 50px",
+            animation: "moveGrid 20s linear infinite",
+          }}
+        />
+      </div>
+
+      {/* Top overlay gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-transparent" />
+
+      {/* Bottom overlay gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+
+      <style jsx>{`
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px) translateX(0px);
+          }
+          25% {
+            transform: translateY(-30px) translateX(20px);
+          }
+          50% {
+            transform: translateY(-60px) translateX(-20px);
+          }
+          75% {
+            transform: translateY(-30px) translateX(20px);
+          }
+        }
+
+        @keyframes moveGrid {
+          0% {
+            transform: translate(0, 0);
+          }
+          100% {
+            transform: translate(50px, 50px);
+          }
+        }
+      `}</style>
     </div>
   );
 };
